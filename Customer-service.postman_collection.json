@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "7c69bd75-c2bc-43e3-87d9-8c24f2e01606",
+		"name": "Customer-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "order-service-1234",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Umang\",\n    \"lastName\": \"Rastogi\",\n    \"age\": 30,\n    \"spendingLimit\": 450000.001244,\n    \"mobileNumber\": \"123455\",\n    \"address\": [\n        {\n            \"type\": \"home\",\n            \"address1\": \"cdcc\",\n            \"address2\": \"ccc\",\n            \"city\": \"Salo1n\",\n            \"state\": \"ccc\",\n            \"zipCode\": \"rw4eedddrer\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer-service/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer-service",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Umang\",\n    \"city\": \"salin\",\n    \"stateZip\": \"233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer-service/customer?firstName=Umang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer-service",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "zipCode",
+							"value": "rw4eedddrer",
+							"disabled": true
+						},
+						{
+							"key": "firstName",
+							"value": "Umang"
+						},
+						{
+							"key": "city",
+							"value": "Salo1n",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
